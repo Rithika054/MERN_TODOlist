@@ -13,7 +13,7 @@ function Home() {
   } ,[])
 
   const handleEdit = (id) =>{
-    axios.put('https://mern-tod-olist.vercel.app/update/'+id)
+    axios.put('https://mern-tod-olist.vercel.app/update/'+id+'/')
     .then(result => {
       location.reload()
     })
@@ -22,7 +22,7 @@ function Home() {
   }
 
   const handleDelete= (id) =>{
-    axios.delete('https://mern-tod-olist.vercel.app/delete/'+id)
+    axios.delete('https://mern-tod-olist.vercel.app/delete/'+id+'/')
     .then(result => {
       location.reload()
     })
