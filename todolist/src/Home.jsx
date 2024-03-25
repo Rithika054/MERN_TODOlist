@@ -7,13 +7,13 @@ import { BsCircleFill, BsCheckCircleFill, BsFillTrashFill,BsFillCheckCircleFill 
 function Home() {
   const[todos,setTodos]=useState([])
   useEffect(() =>{
-    axios.get('http://localhost:3001/get')
+    axios.get('https://mern-tod-olist.vercel.app/get')
     .then(result => setTodos(result.data))
     .catch(err => console.log(err))
   } ,[])
 
   const handleEdit = (id) =>{
-    axios.put('http://localhost:3001/update/'+id)
+    axios.put('https://mern-tod-olist.vercel.app/update/'+id)
     .then(result => {
       location.reload()
     })
@@ -22,7 +22,7 @@ function Home() {
   }
 
   const handleDelete= (id) =>{
-    axios.delete('http://localhost:3001/delete/'+id)
+    axios.delete('https://mern-tod-olist.vercel.app/delete/'+id)
     .then(result => {
       location.reload()
     })
