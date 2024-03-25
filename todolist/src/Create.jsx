@@ -4,7 +4,7 @@ import axios from 'axios'
 function Create() {
   const [task,setTask]=useState()
   const handleAdd = () =>{
-      axios.post('http://localhost:3001/add', {task : task})
+      axios.post('https://mern-tod-olist.vercel.app/add', {task : task})
       .then(result => {
         location.reload()
       })
