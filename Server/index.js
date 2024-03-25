@@ -4,13 +4,17 @@ const cors=require ('cors')
 const TodoModel = require('./Models/Todo')
 
 const app=express()
-
-app.use(cors())
+app.use(cors(
+    {
+        origin : [""],
+        methods: ["POST","GET"],
+        credentials:true
+));
 app.use(express.json())
 
 mongoose.connect('mongodb+srv://Rithika:Rithika%402004@cluster0.lzzuajb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/test')
 
-app.get('/get',(req,res) => {
+app.get("/get",(req,res) => {
     TodoModel.find()
     .then(result => res.json(result))
     .catch(err => res.json(err))
