@@ -7,7 +7,7 @@ import { BsCircleFill, BsCheckCircleFill, BsFillTrashFill,BsFillCheckCircleFill 
 function Home() {
   const[todos,setTodos]=useState([])
   useEffect(() =>{
-    axios.get('https://mern-tod-olist.vercel.app/get')
+    axios.get('https://mern-tod-olist.vercel.app/get/')
     .then(result => setTodos(result.data))
     .catch(err => console.log(err))
   } ,[])
