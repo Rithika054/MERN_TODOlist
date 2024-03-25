@@ -9,7 +9,7 @@ app.use(cors(
         origin : ["https://mern-todolist-frontend-eight.vercel.app"],
         methods: ["POST","GET"],
         credentials:true
-));
+    }));
 app.use(express.json())
 
 mongoose.connect('mongodb+srv://Rithika:Rithika%402004@cluster0.lzzuajb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/test')
