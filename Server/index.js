@@ -4,10 +4,11 @@ const cors=require ('cors')
 const TodoModel = require('./Models/Todo')
 
 const app=express()
+
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect('mongodb://127.0.0.1:27017/test')
+mongoose.connect('mongodb+srv://Rithika:Rithika%402004@cluster0.lzzuajb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/test')
 
 app.get('/get',(req,res) => {
     TodoModel.find()
