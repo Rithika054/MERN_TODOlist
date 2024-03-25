@@ -6,7 +6,7 @@ const TodoModel = require('./Models/Todo')
 const app=express()
 app.use(cors(
     {
-        origin : ["https://mern-todolist-frontend-eight.vercel.app"],
+        origin : '*',
         methods: ["POST","GET"],
         credentials:true
     }));
